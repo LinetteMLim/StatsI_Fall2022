@@ -4,8 +4,9 @@
 
 ## Packages
 library(tidyverse) # Load our packages here
-library(broom) # If not installed - function for installing?
-
+library(broom) 
+# If not installed - function for installing?
+install.packages("broom")
 ?tidyverse
 browseVignettes(package = "tidyverse")
 
@@ -17,7 +18,10 @@ browseVignettes(package = "tidyverse")
 # we can read in a csv file using the read_csv() function, which is 
 # similar to base R's read.csv() function.
 dat <- read.csv("movies.csv")
+movies <- read_csv("movies.csv")
 
+class(dat)
+class(movies)
 ##########
 # Exercise
 ##########
@@ -76,10 +80,22 @@ dat %>%
 # column. Which is the most popular month for Horror films to be 
 # released?
 
+dat %>%
+  filter(genre == "Horror") %>% # filter on the rows
+  select(thtr_rel_month) %>% # select one column
+  mutate(month = month.abb[thtr_rel_month]) %>% # change to month abbreviation
+  group_by(month) %>% # group data by month
+  summarise(n = n()) %>% # perform a summary operation (count the n per month)
+  arrange(desc(n)) # sort in descending order
 
 # 2. Using the dplyr commands you have learned, find the actor 
 # (actor1) with the most award wins. 
 
+dat %>%
+  filter(best_actor_win == "yes") %>% # filter on the rows
+  group_by(actor1) %>% # group data by month
+  summarise(n = n()) %>% # perform a summary operation (count the n per month)
+  arrange(desc(n)) # sort in descending order
 
 #######################
 # Complex operations...
@@ -107,6 +123,13 @@ dat %>%
 # Using the code above as a template, perform the same operation on 
 # a subset of horror films
 
+dat %>%  
+  filter(genre == "Horror") %>% # filter on the rows
+  mutate(month = month.abb[thtr_rel_month]) %>% 
+  group_by(month) %>% 
+  summarise(n = n()) %>%
+  mutate(prop_month = round(n / sum(n), 3)) %>% # mutate after our summarise to find the proportion
+  arrange(desc(prop_month))
 
 #############
 # Visualising
@@ -137,6 +160,8 @@ dat %>%
   geom_col(aes(fill = film_type), position = "dodge") +
   labs(title = "Proportion of Theatrical Releases by Month", y = "proportion") 
 
+# we can run chisq test to check for significance
+
 # The code above is quite complex: not only are we filtering and 
 # grouping, we are also spreading and gathering our data using the 
 # pivot longer and pivot wider functions. These functions change 
@@ -155,3 +180,44 @@ dat %>%
 # learned about today to find out whether the average running time 
 # of feature films has increased in recent years.
 
+dat %>%
+  filter(title_type == "Feature Film") %>%
+  select(runtime, thtr_rel_year) %>%
+  group_by(thtr_rel_year) %>%
+  summarise(av_runtime = mean(runtime)) %>%
+  ggplot(aes(thtr_rel_year, av_runtime)) +
+  geom_line() +
+  geom_smooth(col = "red", se = FALSE) +
+  labs(title = "Average Theatrical Running Time", 
+       subtitle = "Feature Films", 
+       x = "Release Year", 
+       y = "Average Running Time (minutes)")
+
+dat %>%
+  filter(thtr_rel_year > 1995 & thtr_rel_year < 1999) %>%
+  filter(runtime > 120) %>%
+  select(title, runtime, thtr_rel_year) %>%
+  arrange(desc(runtime))
+
+dat %>%
+  filter(best_pic_win == "yes") %>%
+  summarise(mean_run_time = mean(runtime),
+            n = n(),
+            sd = sd(runtime))
+
+dat %>%
+  summarise(mean_run_time = mean(runtime, na.rm = TRUE),
+            n = n(),
+            sd = sd(runtime, na.rm = TRUE))
+
+# compare two means
+# 1. two means: 105.8215, 143.2857
+# 2. sample sizes: 651, 7
+# 3. standard deviations: 19.44, 43.71
+# 4. standard error: stddev 
+# use t test because not enough sample size. 30 for z score
+
+
+
+
+nrow(dat)
