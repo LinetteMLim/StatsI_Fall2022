@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.19)  19 OCT 2022 10:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.19)  19 OCT 2022 10:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./PS2.tex
-(PS2.tex
+**./PS1_answers_LL.tex
+(PS1_answers_LL.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-09-28>
 (C:\Users\linet\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -863,12 +863,15 @@ tex.def
 File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count336
 \l__pdf_internal_box=\box76
-) (PS2.aux
+) (PS1_answers_LL.aux
 
-LaTeX Warning: Label `fig:plot_1' multiply defined.
+LaTeX Warning: Label `boxplot' multiply defined.
+
+
+LaTeX Warning: Label `boxplot' multiply defined.
 
 )
-\openout1 = `PS2.aux'.
+\openout1 = `PS1_answers_LL.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
@@ -928,14 +931,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Package xypdf Info: Line width: 0.47998pt on input line 67.
 Package hyperref Info: Link coloring OFF on input line 67.
 
-(PS2.out) (PS2.out)
+(PS1_answers_LL.out) (PS1_answers_LL.out)
 \@outlinefile=\write7
-\openout7 = `PS2.out'.
+\openout7 = `PS1_answers_LL.out'.
 
 \c@lstlisting=\count343
- [1
 
-{C:/Users/linet/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 (C:\Users\linet\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
@@ -946,183 +947,272 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 99.
+nput line 77.
 
-(PS2_answers_LL.R
+(PS1_answers_LL.R
 consecutive:
-[2]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
-9.
- (C:\Users\linet\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
-File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-
- []
-
-(PS2_answers_LL.R
-consecutive:
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 3
-8.
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 5
+.
 (C:\Users\linet\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
 File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 38.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 5.
 )
-(PS2_answers_LL.R
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--95
+
+ []
+
+[1
+
+{C:/Users/linet/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+(PS1_answers_LL.R
 consecutive:
-[3])
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
-
- []
-
-(PS2_answers_LL.R
+) (PS1_answers_LL.R
 consecutive:
-)
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
+) [2]
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
-
- []
-
-[4] (PS2_answers_LL.R
+(PS1_answers_LL.R
 consecutive:
-)
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+) (PS1_answers_LL.R
+consecutive:
+) (PS1_answers_LL.R
+consecutive:
+) [3] (PS01.R)
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
-(PS2_answers_LL.R
+(PS1_answers_LL.R
 consecutive:
-)
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
+) (PS1_answers_LL.R
+consecutive:
+) [4]
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
  []
 
-[5] (PS2_answers_LL.R
-consecutive:
-)
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
 
  []
 
-(PS2_answers_LL.R
-consecutive:
-) [6] (PS2_answers_LL.R
-consecutive:
-)
-Underfull \hbox (badness 10000) in paragraph at lines 206--207
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
 
  []
 
-(PS2_answers_LL.R
-consecutive:
-[7])
-Underfull \hbox (badness 10000) in paragraph at lines 223--224
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
  []
 
-(PS2_answers_LL.R
-consecutive:
-)
-<plot_class_treatment.pdf, id=157, 505.89pt x 505.89pt>
-File: plot_class_treatment.pdf Graphic file (type pdf)
-<use plot_class_treatment.pdf>
-Package pdftex.def Info: plot_class_treatment.pdf  used on input line 241.
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--227
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
+
+ []
+
+<plot1_Y_X1.pdf, id=75, 505.89pt x 505.89pt>
+File: plot1_Y_X1.pdf Graphic file (type pdf)
+<use plot1_Y_X1.pdf>
+Package pdftex.def Info: plot1_Y_X1.pdf  used on input line 245.
 (pdftex.def)             Requested size: 352.31625pt x 352.32199pt.
- (PS2_answers_LL.R
-consecutive:
-)
-<corrplot_class_treatment.pdf, id=158, 505.89pt x 505.89pt>
-File: corrplot_class_treatment.pdf Graphic file (type pdf)
-<use corrplot_class_treatment.pdf>
-Package pdftex.def Info: corrplot_class_treatment.pdf  used on input line 250.
+<plot_Y_X2.pdf, id=76, 505.89pt x 505.89pt>
+File: plot_Y_X2.pdf Graphic file (type pdf)
+<use plot_Y_X2.pdf>
+Package pdftex.def Info: plot_Y_X2.pdf  used on input line 251.
 (pdftex.def)             Requested size: 352.31625pt x 352.32199pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 252--254
+<plot_Y_X3.pdf, id=77, 505.89pt x 505.89pt>
+File: plot_Y_X3.pdf Graphic file (type pdf)
+<use plot_Y_X3.pdf>
+Package pdftex.def Info: plot_Y_X3.pdf  used on input line 257.
+(pdftex.def)             Requested size: 352.31625pt x 352.32199pt.
+<plot_X1_Y.pdf, id=78, 505.89pt x 505.89pt>
+File: plot_X1_Y.pdf Graphic file (type pdf)
+<use plot_X1_Y.pdf>
+Package pdftex.def Info: plot_X1_Y.pdf  used on input line 263.
+(pdftex.def)             Requested size: 352.31625pt x 352.32199pt.
+<plot_X1_X2.pdf, id=79, 505.89pt x 505.89pt>
+File: plot_X1_X2.pdf Graphic file (type pdf)
+<use plot_X1_X2.pdf>
+Package pdftex.def Info: plot_X1_X2.pdf  used on input line 269.
+(pdftex.def)             Requested size: 352.31625pt x 352.32199pt.
+<plot_X1_X3.pdf, id=80, 505.89pt x 505.89pt>
+File: plot_X1_X3.pdf Graphic file (type pdf)
+<use plot_X1_X3.pdf>
+Package pdftex.def Info: plot_X1_X3.pdf  used on input line 275.
+(pdftex.def)             Requested size: 352.31625pt x 352.32199pt.
+<plot_X2_Y.pdf, id=81, 505.89pt x 505.89pt>
+File: plot_X2_Y.pdf Graphic file (type pdf)
+<use plot_X2_Y.pdf>
+Package pdftex.def Info: plot_X2_Y.pdf  used on input line 281.
+(pdftex.def)             Requested size: 352.31625pt x 352.32199pt.
+<plot_X2_X1.pdf, id=82, 505.89pt x 505.89pt>
+File: plot_X2_X1.pdf Graphic file (type pdf)
+<use plot_X2_X1.pdf>
+Package pdftex.def Info: plot_X2_X1.pdf  used on input line 287.
+(pdftex.def)             Requested size: 352.31625pt x 352.32199pt.
+<plot_X2_X3.pdf, id=83, 505.89pt x 505.89pt>
+File: plot_X2_X3.pdf Graphic file (type pdf)
+<use plot_X2_X3.pdf>
+Package pdftex.def Info: plot_X2_X3.pdf  used on input line 293.
+(pdftex.def)             Requested size: 352.31625pt x 352.32199pt.
+<plot_X3_Y.pdf, id=84, 505.89pt x 505.89pt>
+File: plot_X3_Y.pdf Graphic file (type pdf)
+<use plot_X3_Y.pdf>
+Package pdftex.def Info: plot_X3_Y.pdf  used on input line 299.
+(pdftex.def)             Requested size: 352.31625pt x 352.32199pt.
+<plot_X3_X1.pdf, id=85, 505.89pt x 505.89pt>
+File: plot_X3_X1.pdf Graphic file (type pdf)
+<use plot_X3_X1.pdf>
+Package pdftex.def Info: plot_X3_X1.pdf  used on input line 305.
+(pdftex.def)             Requested size: 352.31625pt x 352.32199pt.
+<plot_X3_X2.pdf, id=86, 505.89pt x 505.89pt>
+File: plot_X3_X2.pdf Graphic file (type pdf)
+<use plot_X3_X2.pdf>
+Package pdftex.def Info: plot_X3_X2.pdf  used on input line 311.
+(pdftex.def)             Requested size: 352.31625pt x 352.32199pt.
+[7 <./plot1_Y_X1.pdf>] [8 <./plot_Y_X2.pdf>] [9 <./plot_Y_X3.pdf>] [10 <./plot_
+X1_Y.pdf>] [11 <./plot_X1_X2.pdf>] [12 <./plot_X1_X3.pdf>] [13 <./plot_X2_Y.pdf
+>] [14 <./plot_X2_X1.pdf>] [15 <./plot_X2_X3.pdf>] [16 <./plot_X3_Y.pdf>]
+[17 <./plot_X3_X1.pdf>] [18 <./plot_X3_X2.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
 
  []
 
-[8] [9 <./plot_class_treatment.pdf>] [10 <./corrplot_class_treatment.pdf>]
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 259--260
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
 
  []
 
-
-LaTeX Warning: Reference `fig:women_desc' on page 12 undefined on input line 26
-1.
-
-[12] (PS2_answers_LL.R
-consecutive:
-) (PS2_answers_LL.R
+(PS1_answers_LL.R
 consecutive:
 )
-Underfull \hbox (badness 10000) in paragraph at lines 278--279
-
- []
-
-(PS2_answers_LL.R
-consecutive:
-) [13] (PS2_answers_LL.R
-consecutive:
-)
-Underfull \hbox (badness 10000) in paragraph at lines 295--296
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--316
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
 
  []
 
-[14] (PS2_answers_LL.R
+(PS1_answers_LL.R
 consecutive:
 )
-Underfull \hbox (badness 10000) in paragraph at lines 325--326
+<Rplot_Y_Region.pdf, id=209, 262.9825pt x 259.97125pt>
+File: Rplot_Y_Region.pdf Graphic file (type pdf)
+<use Rplot_Y_Region.pdf>
+Package pdftex.def Info: Rplot_Y_Region.pdf  used on input line 347.
+(pdftex.def)             Requested size: 352.31625pt x 348.29619pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 332--333
+[19] [20 <./Rplot_Y_Region.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 353--354
 
  []
 
-[15] (PS2.aux)
+(PS1_answers_LL.R
+consecutive:
+)
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
 
-LaTeX Warning: There were undefined references.
+ []
 
+[21]
+<Rplot_Colour_Y_X1.png, id=249, 400.49625pt x 383.4325pt>
+File: Rplot_Colour_Y_X1.png Graphic file (type png)
+<use Rplot_Colour_Y_X1.png>
+Package pdftex.def Info: Rplot_Colour_Y_X1.png  used on input line 366.
+(pdftex.def)             Requested size: 352.31625pt x 337.32217pt.
+ [22 <./Rplot_Colour_Y_X1.png>] (PS1_answers_LL.R
+consecutive:
+)
+Underfull \hbox (badness 10000) in paragraph at lines 375--376
+
+ []
+
+<plot_3_variables.pdf, id=257, 505.89pt x 505.89pt>
+File: plot_3_variables.pdf Graphic file (type pdf)
+<use plot_3_variables.pdf>
+Package pdftex.def Info: plot_3_variables.pdf  used on input line 380.
+(pdftex.def)             Requested size: 352.31625pt x 352.32199pt.
+[23] [24 <./plot_3_variables.pdf>] (PS1_answers_LL.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `PS2.out' has not changed.
+Package rerunfilecheck Info: File `PS1_answers_LL.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27282 strings out of 475385
- 485341 string characters out of 2776906
- 1151619 words of memory out of 3000000
- 47973 multiletter control sequences out of 15000+600000
- 480996 words of font info for 77 fonts, out of 8000000 for 9000
+ 27286 strings out of 475385
+ 485720 string characters out of 2776906
+ 1103233 words of memory out of 3000000
+ 48031 multiletter control sequences out of 15000+600000
+ 480352 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,8n,89p,3237b,2820s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 84i,6n,89p,3248b,2126s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\linet\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk> <C:\Users\linet\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\tcrm1000.pk><C:/Users/linet/AppData/Local/Programs/MiKTeX/fonts/type1/public/
@@ -1133,15 +1223,12 @@ onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/linet/AppData/Local/Programs
 Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/linet/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/line
 t/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Use
-rs/linet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-<C:/Users/linet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-r8.pfb><C:/Users/linet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb><C:/Users/linet/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmti10.pfb><C:/Users/linet/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmtt12.pfb>
-Output written on PS2.pdf (15 pages, 219215 bytes).
+rs/linet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pf
+b><C:/Users/linet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmtt12.pfb>
+Output written on PS1_answers_LL.pdf (24 pages, 296581 bytes).
 PDF statistics:
- 336 PDF objects out of 1000 (max. 8388607)
- 159 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 353 PDF objects out of 1000 (max. 8388607)
+ 104 named destinations out of 1000 (max. 500000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 

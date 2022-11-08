@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.19)  19 OCT 2022 10:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.10.19)  8 NOV 2022 10:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./PS2.tex
-(PS2.tex
+**./PS3.tex
+(PS3.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-09-28>
 (C:\Users\linet\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -863,31 +863,28 @@ tex.def
 File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count336
 \l__pdf_internal_box=\box76
-) (PS2.aux
-
-LaTeX Warning: Label `fig:plot_1' multiply defined.
-
 )
-\openout1 = `PS2.aux'.
+No file PS3.aux.
+\openout1 = `PS3.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
 
 (C:\Users\linet\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -914,234 +911,40 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 68.
 
  (C:\Users\linet\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 68.
 
 
 (C:\Users\linet\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package xypdf Info: Line width: 0.47998pt on input line 67.
-Package hyperref Info: Link coloring OFF on input line 67.
-
-(PS2.out) (PS2.out)
+Package xypdf Info: Line width: 0.47998pt on input line 68.
+Package hyperref Info: Link coloring OFF on input line 68.
 \@outlinefile=\write7
-\openout7 = `PS2.out'.
-
-\c@lstlisting=\count343
- [1
-
-{C:/Users/linet/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-(C:\Users\linet\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\linet\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
-File: lstlang2.sty 2020/03/24 1.8d listings language file
-)
-(C:\Users\linet\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
-File: lstlang3.sty 2020/03/24 1.8d listings language file
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 99.
-
-(PS2_answers_LL.R
-consecutive:
-[2]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
-9.
- (C:\Users\linet\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
-File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-
- []
-
-(PS2_answers_LL.R
-consecutive:
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 3
-8.
-(C:\Users\linet\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
-File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 38.
-)
-(PS2_answers_LL.R
-consecutive:
-[3])
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
-
- []
-
-(PS2_answers_LL.R
-consecutive:
-)
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
-
- []
+\openout7 = `PS3.out'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+! I can't write on file `PS3.pdf'.
+(Press Enter to retry, or Control-C to exit; default file extension is `.pdf')
+Please type another file name for output
+! Emergency stop.
+<to be read again> 
+                   \edef 
+l.68 \begin{document}
+                     
+*** (job aborted, file error in nonstop mode)
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
-
- []
-
-[4] (PS2_answers_LL.R
-consecutive:
-)
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
-
- []
-
-(PS2_answers_LL.R
-consecutive:
-)
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
-
- []
-
-[5] (PS2_answers_LL.R
-consecutive:
-)
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
-
- []
-
-(PS2_answers_LL.R
-consecutive:
-) [6] (PS2_answers_LL.R
-consecutive:
-)
-Underfull \hbox (badness 10000) in paragraph at lines 206--207
-
- []
-
-(PS2_answers_LL.R
-consecutive:
-[7])
-Underfull \hbox (badness 10000) in paragraph at lines 223--224
-
- []
-
-(PS2_answers_LL.R
-consecutive:
-)
-<plot_class_treatment.pdf, id=157, 505.89pt x 505.89pt>
-File: plot_class_treatment.pdf Graphic file (type pdf)
-<use plot_class_treatment.pdf>
-Package pdftex.def Info: plot_class_treatment.pdf  used on input line 241.
-(pdftex.def)             Requested size: 352.31625pt x 352.32199pt.
- (PS2_answers_LL.R
-consecutive:
-)
-<corrplot_class_treatment.pdf, id=158, 505.89pt x 505.89pt>
-File: corrplot_class_treatment.pdf Graphic file (type pdf)
-<use corrplot_class_treatment.pdf>
-Package pdftex.def Info: corrplot_class_treatment.pdf  used on input line 250.
-(pdftex.def)             Requested size: 352.31625pt x 352.32199pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 252--254
-
- []
-
-[8] [9 <./plot_class_treatment.pdf>] [10 <./corrplot_class_treatment.pdf>]
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 259--260
-
- []
-
-
-LaTeX Warning: Reference `fig:women_desc' on page 12 undefined on input line 26
-1.
-
-[12] (PS2_answers_LL.R
-consecutive:
-) (PS2_answers_LL.R
-consecutive:
-)
-Underfull \hbox (badness 10000) in paragraph at lines 278--279
-
- []
-
-(PS2_answers_LL.R
-consecutive:
-) [13] (PS2_answers_LL.R
-consecutive:
-)
-Underfull \hbox (badness 10000) in paragraph at lines 295--296
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 315--316
-
- []
-
-[14] (PS2_answers_LL.R
-consecutive:
-)
-Underfull \hbox (badness 10000) in paragraph at lines 325--326
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 332--333
-
- []
-
-[15] (PS2.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package rerunfilecheck Info: File `PS2.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
- ) 
+ 
 Here is how much of TeX's memory you used:
- 27282 strings out of 475385
- 485341 string characters out of 2776906
- 1151619 words of memory out of 3000000
- 47973 multiletter control sequences out of 15000+600000
- 480996 words of font info for 77 fonts, out of 8000000 for 9000
+ 25782 strings out of 475385
+ 467102 string characters out of 2776906
+ 808215 words of memory out of 3000000
+ 46705 multiletter control sequences out of 15000+600000
+ 475353 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,8n,89p,3237b,2820s stack positions out of 10000i,1000n,20000p,200000b,80000s
- <C:\Users\linet\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1200.pk> <C:\Users\linet\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\tcrm1000.pk><C:/Users/linet/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmbx12.pfb><C:/Users/linet/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmmi10.pfb><C:/Users/linet/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/linet/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/linet/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/linet/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/line
-t/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Use
-rs/linet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-<C:/Users/linet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-r8.pfb><C:/Users/linet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb><C:/Users/linet/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmti10.pfb><C:/Users/linet/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmtt12.pfb>
-Output written on PS2.pdf (15 pages, 219215 bytes).
-PDF statistics:
- 336 PDF objects out of 1000 (max. 8388607)
- 159 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 84i,3n,89p,3237b,262s stack positions out of 10000i,1000n,20000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

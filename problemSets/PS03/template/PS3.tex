@@ -62,7 +62,7 @@
 
 \title{Problem Set 3}
 \date{Due: November 20, 2021}
-\author{Applied Stats/Quant Methods 1}
+\author{Linette Lim}
 
 
 \begin{document}
@@ -85,9 +85,85 @@
 \noindent We are interested in knowing how the difference in campaign spending between incumbent and challenger affects the incumbent's vote share. 
 	\begin{enumerate}
 		\item Run a regression where the outcome variable is \texttt{voteshare} and the explanatory variable is \texttt{difflog}.	\vspace{5cm}
+\noindent First, we make sure the global environment is clear and tidyverse is loaded. Then, we enter the data.
+\vspace{.5cm}
+\lstinputlisting[language=R, firstline=6, lastline=6]{PS3_answers_LinetteLim.R}  
+\vspace{.5cm}   
+\noindent Then, we use the lm() function to fit a regression model where the outcome variable is voteshare and the explanatory variable is difflog.
+\vspace{.5cm}
+\lstinputlisting[language=R, firstline=10, lastline=12]{PS3_answers_LinetteLim.R}  
+\vspace{.5cm}    
+\noindent We get:
+\begin{verbatim}
+> summary(diffvote.lm)
+
+Call:
+lm(formula = voteshare ~ difflog, data = data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.26832 -0.05345 -0.00377  0.04780  0.32749 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.579031   0.002251  257.19   <2e-16 ***
+difflog     0.041666   0.000968   43.04   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.07867 on 3191 degrees of freedom
+Multiple R-squared:  0.3673,	Adjusted R-squared:  0.3671 
+F-statistic:  1853 on 1 and 3191 DF,  p-value: < 2.2e-16
+\end{verbatim}
 		\item Make a scatterplot of the two variables and add the regression line. 	\vspace{7cm}
+\noindent We use the plot() function to make a scatterplot and abline () to add the regression line.
+\vspace{.5cm}
+\lstinputlisting[language=R, firstline=15, lastline=19]{PS3_answers_LinetteLim.R}  
+\vspace{.5cm}   
+\noindent We get:
+\begin{figure}[hbtp!]\centering
+	\caption{\footnotesize Impact of Difference in Campaign Spend on Incumbent Party Voteshare.}
+	\label{fig:plot_1}
+	\includegraphics[width=.75\textwidth]{plot1_difflog_voteshare.pdf}
+\end{figure}
 		\item Save the residuals of the model in a separate object.	\vspace{7cm}
+\noindent We use the resid() function to calculate the residuals and then save as separate object.
+\vspace{.5cm}
+\lstinputlisting[language=R, firstline=22, lastline=22]{PS3_answers_LinetteLim.R}  
+\vspace{.5cm}   
+\noindent Let us plot the residuals using the predict() and segments() functions to check that the assumptions of the model have been satisfied.
+\vspace{.5cm}
+\lstinputlisting[language=R, firstline=24, lastline=25]{PS3_answers_LinetteLim.R}  
+\vspace{.5cm}   
+\noindent We get:
+\begin{figure}[hbtp!]\centering
+	\caption{\footnotesize Residuals and regression line of Plot 1.}
+	\label{fig:plot_2}
+	\includegraphics[width=.75\textwidth]{plot2_residuals and regression line.pdf}
+\end{figure}
+\noindent We want to check that the residuals are zero in expectation.
+\vspace{.5cm}
+\lstinputlisting[language=R, firstline=27, lastline=33]{PS3_answers_LinetteLim.R}  
+\vspace{.5cm}  
+\noindent We get:
+\begin{figure}[hbtp!]\centering
+	\caption{\footnotesize Density of residuals.}
+	\label{fig:plot_3}
+	\includegraphics[width=.75\textwidth]{plot3_density of residuals.pdf}
+\end{figure}
+\noindent We would also expect the residuals to be randomly scattered without showing any  systematic patterns when plotted against the predictor variable:
+\vspace{.5cm}
+\lstinputlisting[language=R, firstline=36, lastline=39]{PS3_answers_LinetteLim.R}  
+\vspace{.5cm}  
+\noindent We get:
+\begin{figure}[hbtp!]\centering
+	\caption{\footnotesize Residual against predictor plot.}
+	\label{fig:plot_4}
+	\includegraphics[width=.75\textwidth]{plot4_residual against predictor.pdf}
+\end{figure}
 		\item Write the prediction equation.
+\noindent Using Y = b0 + b1X1 and extracting the coefficients from diffvote.lm in Q1.1, we have:
+Incumbent party voteshare = 0.58 + 0.04*Difference in Campaign Spending, or Y = 0.58 + 0.04X
 	\end{enumerate}
 	
 \newpage
