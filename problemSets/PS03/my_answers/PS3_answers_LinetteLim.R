@@ -40,7 +40,7 @@ dev.off()
 # Q1.4. Write the prediction equation. Using Y = b0 + b1X1 and extracting the coefficients
 # from diffvote.lm in Q1.1, we have:
 # Incumbent party voteshare = 0.58 + 0.04*Difference in Campaign Spending, or
-# Y = 0.58 + 0.04X
+# Y = 0.58 + 0.04X1
 
 # Q2.1. Use lm() function to fit a regression model where the outcome variable
 # is presvote and the explanatory variable is difflog
@@ -49,7 +49,7 @@ diffpres.lm <- lm(presvote ~ difflog, data = data)
 summary(diffpres.lm)
 
 # Q2.2. Use plot() and abline () to make a scatterplot and add the regression line
-pdf("plot2_difflog_presvote.pdf")
+pdf("plot5_difflog_presvote.pdf")
 plot(data$difflog, data$presvote, main 
      = "Impact of difference in campaign spending on incumbent party's presidential voteshare")
 abline(diffpres.lm)
@@ -60,21 +60,24 @@ diffpres.res <- resid(diffpres.lm)
 # Plot the residuals to check that the assumptions of the model have been satisfied.
 preds.diffpres <- predict(diffpres.lm)
 segments(data$difflog, data$presvote, data$difflog, preds.diffpres)
+pdf("plot7_density of residuals.pdf")
 plot(density(data$presvote-preds.diffpres),
      main = "Density of residuals",
      ylab = "Y", xlab = "X",
      cex.axis=1.5, cex.lab=2,
      cex.main=1.5, lwd=3)
+dev.off()
 # We see that the residuals are zero in expectation.
 # We would expect the residuals to be randomly scattered without showing any 
 # systematic patterns when plotted against the predictor variable:
+pdf("plot8_residual against predictor.pdf")
 plot(data$difflog, diffpres.res, 
      ylab = "Residuals", xlab= "Difference in Campaign Spending")
-
+dev.off()
 # Q2.4. Write the prediction equation. Using Y = b0 + b1X1 and extracting the coefficients
 # from diffpres.lm in Q2.1, we have:
 # Incumbent party's presidential voteshare = 0.51 + 0.02*Difference in Campaign Spending, or
-# Y = 0.58 + 0.04X
+# Y = 0.58 + 0.04X1
 
 # Q3.1. Use lm() function to fit a regression model where the outcome variable
 # is voteshare and the explanatory variable is presvote
@@ -83,7 +86,7 @@ presvoteshare.lm <- lm(voteshare ~ presvote, data = data)
 summary(presvoteshare.lm)
 
 # Q3.2. Use plot() and abline () to make a scatterplot and add the regression line
-pdf("plot3_presvote_voteshare.pdf")
+pdf("plot9_presvote_voteshare.pdf")
 plot(data$presvote, data$voteshare, main 
      = "Impact of incumbent party's presidential voteshare on incumbent party voteshare")
 abline(presvoteshare.lm)
@@ -92,7 +95,7 @@ dev.off()
 # Q3.3. Write the prediction equation. Using Y = b0 + b1X1 and extracting the coefficients
 # from presvoteshare.lm in Q3.1, we have:
 # Incumbent party voteshare = 0.44 + 0.39*incumbent party's presidential voteshare, or
-# Y = 0.44 + 0.39X
+# Y = 0.44 + 0.39X1
 
 # Q4.1. Run a regression where the outcome variable is the residuals from 
 # Question 1 and the explanatory variable is the residuals from Question 2.
@@ -109,7 +112,11 @@ dev.off()
 
 # Q4.3. Write the prediction equation:
 # Residuals of incumbent party voteshare = -4.860e-18 + 2.569e-01*residuals of incumbent party's presidential voteshare, or
-# Y = -4.860e-18 + 2.569e-01X
+# Y = -4.860e-18 + 2.569e-01X1. 
+# After rounding the coefficients:
+round(-4.860e-18, digits = 4)
+round(2.569e-01, digits = 4)
+# We get: Y = 0 + 0.2569X1 = 0.2569X1
 
 # Q5.1. Run a regression where the outcome variable is the incumbent's voteshare
 # and the explanatory variables are difflog and presvote.
@@ -122,4 +129,12 @@ summary(reg2)
 # 0.26*incumbent party's presidential voteshare, or
 # Y = 0.45 + 0.04X1 + 0.26X2
 
-# Q5.3. 
+# Q5.3. Looking at the regression output for Q5, we see that the coefficient estimate
+# for presvote (0.2568770). This means that for a 1 unit increase in incumbent party's 
+# presidential voteshare, we have a 0.26 unit increase in incumbent pary voteshare. 
+# Comparing it with the regression output for Q4, we see that the coefficient estimate
+# for diffpres.res (0.26) is identical to the coefficent estimate for presvote in Q5.
+# Recall that in Q4, we regressed the residuals from voteshare ~ difflog against the
+# residuals from presvote ~ difflog. By doing so, we are controlling for difflog (the
+# difference in campaign spend between incumbent and challenger). In other words, this 
+# comparison affirms the impact of presvote on voteshare as 0.26.

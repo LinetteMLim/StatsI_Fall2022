@@ -60,96 +60,21 @@
 \newcommand{\Sref}[1]{Section~\ref{#1}}
 \newtheorem{hyp}{Hypothesis}
 
-\title{Problem Set 2}
-\date{Due: October 16, 2022}
-\author{Applied Stats/Quant Methods 1}
+\title{House price}
+\date{Week 9}
+\author{Linette Lim}
 
 \begin{document}
-	\maketitle
-	\section*{Linette Lim}	
-	\vspace{.5cm}
-	\section*{Question 1 (40 points): Political Science}
+	\section*{Question 1}
 		\vspace{.25cm}
-	The following table was created using the data from a study run in a major Latin American city.\footnote{Fried, Lagunes, and Venkataramani (2010). ``Corruption and Inequality at the Crossroad: A Multimethod Study of Bribery and Discrimination in Latin America. \textit{Latin American Research Review}. 45 (1): 76-97.} As part of the experimental treatment in the study, one employee of the research team was chosen to make illegal left turns across traffic to draw the attention of the police officers on shift. Two employee drivers were upper class, two were lower class drivers, and the identity of the driver was randomly assigned per encounter. The researchers were interested in whether officers were more or less likely to solicit a bribe from drivers depending on their class (officers use phrases like, ``We can solve this the easy way'' to draw a bribe). The table below shows the resulting data.
-
-\newpage
-\begin{table}[h!]
-	\centering
-	\begin{tabular}{l | c c c }
-		& Not Stopped & Bribe requested & Stopped/given warning \\
-		\\[-1.8ex] 
-		\hline \\[-1.8ex]
-		Upper class & 14 & 6 & 7 \\
-		Lower class & 7 & 7 & 1 \\
-		\hline
-	\end{tabular}
-\end{table}
-
-\begin{enumerate}
-	
-	\item [(a)]
-	Calculate the $\chi^2$ test statistic by hand/manually (even better if you can do "by hand" in \texttt{R}).\\
-	\vspace{7cm}
-	
-	\item
-Answer for Question 1a\\
-\noindent First, make sure global environment is empty, load packages such as Tidyverse, and set the working directory.\\ 
-\noindent Now create data in R using the following code:\\
-\vspace{.5cm}
-\lstinputlisting[language=R, firstline=7, lastline=29]{PS2_answers_LL.R}  
-\vspace{.5cm}
-\noindent We get a matrix, A:\\
+\noindent We run stargazer() to check the impact of SqFtLot on AdjSalePrice.
 \begin{verbatim}
-            Not stopped Bribe requested Stopped or warned
-Upper class          14               6                 7
-Lower class           7               7                 1
-\end{verbatim}            
-\noindent I manually calculated the row and column totals using these steps:\\
-\vspace{.5cm}
-\lstinputlisting[language=R, firstline=32, lastline=39]{PS2_answers_LL.R}  
-\vspace{.5cm}
-\noindent Based on the row and column totals, I created a new matrix with the following code:\\
-\vspace{.5cm}
-\lstinputlisting[language=R, firstline=41, lastline=63]{PS2_answers_LL.R}  
-\vspace{.5cm}
-\noindent The new matrix, B, is as follows:\\
+> stargazer(mod1, type = "text", title = "Impact of SqFtLot on AdjSalePrice")Impact of SqFtLot on AdjSalePrice===============================================                        Dependent variable:                        ---------------------------                           AdjSalePrice        -----------------------------------------------SqFtLot                      1.887***                                        (0.093)                                                         Constant                  542,505.900***                                   (2,903.559)                                                       -----------------------------------------------Observations                  20,340           R2                             0.020           Adjusted R2                    0.020           Residual Std. Error  383,401.400 (df = 20338)  F Statistic         410.717*** (df = 1; 20338) ===============================================Note:               *p<0.1; **p<0.05; ***p<0.01
 \begin{verbatim}
-             Not stopped Bribe requested Stopped or warned Row total
-Upper class           14               6                 7        27
-Lower class            7               7                 1        15
-Column total          21              13                 8        42
-\end{verbatim}
-\vspace{.3cm}
-\noindent Now, I calculate the Fe, or Fexpected with the formula Fe = (Row total / grand total) * column total, and with that we can calculate the chi square statistic:\\
 \vspace{.5cm}
-\lstinputlisting[language=R, firstline=69, lastline=76]{PS2_answers_LL.R}  
-\vspace{.5cm}
-\ The chi square is:\\
+\noindent Next we use the stargazer() with NewConstruction as an addition.
 \begin{verbatim}
-[1] 3.791168
-\end{verbatim}
-\vspace{.3cm}
-\noindent To check if the answer 'by hand' is correct, we can run the chisq.test() function on A and we get chi square = 3.7912:\\
-\begin{verbatim}
-	Pearson's Chi-squared test
-
-data:  A
-X-squared = 3.7912, df = 2, p-value = 0.1502
-\end{verbatim}
-\vspace{.3cm}
-
-	\item [(b)]
-	Now calculate the p-value from the test statistic you just created (in \texttt{R}).\footnote{Remember frequency should be $>$ 5 for all cells, but let's calculate the p-value here anyway.}  What do you conclude if $\alpha = 0.1$?\\
-	
-		\item
-Answer for Question 1b\\
-\noindent First, we calculate the degrees of freedom with the formula: df = (rows -1)(columns -1). We get df=2. We then use df=2 in the following formula to find the p-value:\\
-\vspace{.5cm}
-\lstinputlisting[language=R, firstline=89, lastline=89]{PS2_answers_LL.R}  
-\vspace{.5cm}
-\noindent We get:\\
-\begin{verbatim}
-[1] 0.1502306
+> stargazer(mod1, mod2, type = "text", title = "Impact of SqFtLot and Gender on AdjSalePrice")Impact of SqFtLot and Gender on AdjSalePrice=========================================================================                                     Dependent variable:                                     -----------------------------------------------------                                        AdjSalePrice                                                    (1)                        (2)            -------------------------------------------------------------------------SqFtLot                      1.887***                   1.930***                                      (0.093)                    (0.093)                                                                                   NewConstruction                                      59,531.190***                                                             (8,768.867)                                                                                 Constant                  542,505.900***             535,727.000***                                 (2,903.559)                (3,067.419)                                                                                 -------------------------------------------------------------------------Observations                  20,340                     20,340          R2                            0.020                      0.022           Adjusted R2                   0.020                      0.022           Residual Std. Error  383,401.400 (df = 20338)   382,977.100 (df = 20337) F Statistic         410.717*** (df = 1; 20338) 228.859*** (df = 2; 20337)=========================================================================Note:                                         *p<0.1; **p<0.05; ***p<0.01
 \end{verbatim}
 \noindent To confirm if p-value is 0.15, I convert the matrix (A) created earlier into a table and run some code as follows. The summary() function reaffirms the chi sq statistic as 3.79 and the p-value as 0.15.\\
 \vspace{.5cm}
@@ -222,7 +147,14 @@ Answer for Question 1d\\
 \vspace{.5cm}
 \noindent We get:\\
 \begin{verbatim}
-> print(dataframe)  Class Cases       Treatment1 upper    14     not.stopped2 upper     6 bribe.requested3 upper     7  stopped.warned4 lower     7     not.stopped5 lower     7 bribe.requested6 lower     1  stopped.warned
+> print(dataframe)
+  Class Cases       Treatment
+1 upper    14     not.stopped
+2 upper     6 bribe.requested
+3 upper     7  stopped.warned
+4 lower     7     not.stopped
+5 lower     7 bribe.requested
+6 lower     1  stopped.warned
 \end{verbatim}
 \noindent Next, we apply the ggplot() function.\\
 \vspace{.5cm}
@@ -287,7 +219,23 @@ Answer for Question 2b\\
 \vspace{.5cm}
 \noindent We get:\\
 \begin{verbatim}
-Call:lm(formula = water ~ reserved, data = data)Residuals:    Min      1Q  Median      3Q     Max -23.991 -14.738  -7.865   2.262 316.009 Coefficients:            Estimate Std. Error t value Pr(>|t|)    (Intercept)   14.738      2.286   6.446 4.22e-10 ***reserved       9.252      3.948   2.344   0.0197 *  ---Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1Residual standard error: 33.45 on 320 degrees of freedomMultiple R-squared:  0.01688,	Adjusted R-squared:  0.0138 F-statistic: 5.493 on 1 and 320 DF,  p-value: 0.0197
+Call:
+lm(formula = water ~ reserved, data = data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-23.991 -14.738  -7.865   2.262 316.009 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   14.738      2.286   6.446 4.22e-10 ***
+reserved       9.252      3.948   2.344   0.0197 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 33.45 on 320 degrees of freedom
+Multiple R-squared:  0.01688,	Adjusted R-squared:  0.0138 
+F-statistic: 5.493 on 1 and 320 DF,  p-value: 0.0197
 \end{verbatim}
 \noindent Here, we see that the p-value = 0.0197. This is less than the typical threshold of alpha=0.05, so we reject the null hypothesis that treatment effect (of reservation policy on new or repaired drinking water facilities) is zero.\\
 
@@ -301,7 +249,10 @@ Answer for Question 2c\\
 \vspace{.5cm}
 \noindent We get:\\
 \begin{verbatim}
-> confint(fit.data)                2.5 %   97.5 %(Intercept) 10.240240 19.23640reserved     1.485608 17.01924
+> confint(fit.data)
+                2.5 %   97.5 %
+(Intercept) 10.240240 19.23640
+reserved     1.485608 17.01924
 \end{verbatim}
 \noindent The result tells us that having reservations for women is estimated to increase the number of drinking water facilities by 9.25 facilities with a 95 percent confidence interval of [1.49, 17.02].\\
 
