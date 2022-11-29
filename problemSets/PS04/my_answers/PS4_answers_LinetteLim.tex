@@ -106,7 +106,13 @@ help(Prestige)
 \vspace{.5cm}   
 \noindent From the summary() function, we know that there are 31 coded as professionals. Using the table() function, we check the output to see if it worked as expected:
 \begin{verbatim}
-> table(type = Prestige$type,+      Professional = Prestige$prof)      Professionaltype    0  1  bc   44  0  prof  0 31  wc   23  0
+> table(type = Prestige$type,
++      Professional = Prestige$prof)
+      Professional
+type    0  1
+  bc   44  0
+  prof  0 31
+  wc   23  0
 \end{verbatim}
 	
 	\item [(b)]
@@ -118,8 +124,30 @@ help(Prestige)
 \lstinputlisting[language=R, firstline=22, lastline=23]{PS4_answers_LinetteLim.R}  
 \vspace{.5cm}   
 \noindent We run summary() and get the following regression output:
+\newpage
 \begin{verbatim}
-> summary(mod)Call:lm(formula = prestige ~ income + prof + income:prof, data = Prestige)Residuals:    Min      1Q  Median      3Q     Max -14.852  -5.332  -1.272   4.658  29.932 Coefficients:              Estimate Std. Error t value Pr(>|t|)    (Intercept) 21.1422589  2.8044261   7.539 2.93e-11 ***income       0.0031709  0.0004993   6.351 7.55e-09 ***prof        37.7812800  4.2482744   8.893 4.14e-14 ***income:prof -0.0023257  0.0005675  -4.098 8.83e-05 ***---Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1Residual standard error: 8.012 on 94 degrees of freedom  (4 observations deleted due to missingness)Multiple R-squared:  0.7872,	Adjusted R-squared:  0.7804 F-statistic: 115.9 on 3 and 94 DF,  p-value: < 2.2e-16
+> summary(mod)
+
+Call:
+lm(formula = prestige ~ income + prof + income:prof, data = Prestige)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-14.852  -5.332  -1.272   4.658  29.932 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 21.1422589  2.8044261   7.539 2.93e-11 ***
+income       0.0031709  0.0004993   6.351 7.55e-09 ***
+prof        37.7812800  4.2482744   8.893 4.14e-14 ***
+income:prof -0.0023257  0.0005675  -4.098 8.83e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 8.012 on 94 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.7872,	Adjusted R-squared:  0.7804 
+F-statistic: 115.9 on 3 and 94 DF,  p-value: < 2.2e-16
 \end{verbatim}
 
 	\item [(c)]
@@ -141,7 +169,6 @@ help(Prestige)
 
 \noindent The coefficient for professional is 37.78. A positive regression coefficient means that prestige is higher for the dummy variable 'professional' than for the reference group (bc and wc combined). The regression coefficient is statistically significant, which means the prestige discrepancy between the two groups is also statistically significant.
 	
-	\newpage
 	\item [(f)]
 	What is the effect of a \$1,000 increase in income on prestige score for professional occupations? In other words, we are interested in the marginal effect of income when the variable \texttt{professional} takes the value of $1$. Calculate the change in $\hat{y}$ associated with a \$1,000 increase in income based on your answer for (c).
 	
@@ -208,11 +235,16 @@ a precinct that was adjacent to a precinct in the treatment group (since people 
 \lstinputlisting[language=R, firstline=81, lastline=84]{PS4_answers_LinetteLim.R}  
 \vspace{.5cm}   
 \noindent We get the following output:
-\begin{verbatim}> T.test.yard <- 0.042/0.016> n <- 131> k <- 2> p.values.yard <- 2*pt(abs(T.test.yard) , n-k, lower.tail = F)> p.values.yard[1] 0.009711646
+\begin{verbatim}
+> T.test.yard <- 0.042/0.016
+> n <- 131
+> k <- 2
+> p.values.yard <- 2*pt(abs(T.test.yard) , n-k, lower.tail = F)
+> p.values.yard
+[1] 0.009711646
 \end{verbatim}
 \noindent The p value, at 0.0097, is smaller than alpha = .05, so we reject the null hypothesis that there is no discernible linear relationship between the presence of yard signs and Cuccinelli's vote share.
-
-	\newpage		
+	
 	\item [(b)]  Use the results to determine whether being
 	next to precincts with these yard signs affects vote
 	share (e.g., conduct a hypothesis test with $\alpha = .05$).
@@ -226,7 +258,11 @@ vspace{.5cm}
 \lstinputlisting[language=R, firstline=94, lastline=95]{PS4_answers_LinetteLim.R}  
 \vspace{.5cm}   
 \noindent We get the following output:
-\begin{verbatim}> T.test.adjacent <- 0.042/0.013> p.values.adjacent <- 2*pt(abs(T.test.adjacent) , n-k, lower.tail = F)> p.values.adjacent[1] 0.001566685
+\begin{verbatim}
+> T.test.adjacent <- 0.042/0.013
+> p.values.adjacent <- 2*pt(abs(T.test.adjacent) , n-k, lower.tail = F)
+> p.values.adjacent
+[1] 0.001566685
 \end{verbatim}
 \noindent The p value, at 0.0015, is smaller than alpha = .05, so we reject the null hypothesis that there is no discernible linear relationship between the presence of yard signs in adjacent precincts and Cuccinelli's vote share.
 	
@@ -237,8 +273,14 @@ vspace{.5cm}
 \noindent The coefficient for the constant term indicates that if all the explanatory variables in the model (precincts with yard signs, precincts adjacent to yard signs) are zero, then the value of the dependent variable will be equal to the constant term. In other words, in the absence of the signs treatment, the proportion of the vote share for Cuccinelli stands at 0.302. 
 	
 	\item [(d)] Evaluate the model fit for this regression.  What does this	tell us about the importance of yard signs versus other factors that are not modeled?
+	\vspace{0.5cm}
 
 \noindent The R squared for the model is 0.094. Generally, the closer the R squared is to 1, the better the fit. The lower the R squared value, the smaller the proportion of the variance for a response variable (in this case, Cuccinelli's vote share) that can be explained by the explanatory variables (yard signs and precincts adjacent to yard signs) in the a regression model. This suggests that the predictive power of the model can benefit from the inclusion of other factors, for example, party identity and campaign spending.
+
+\vspace{0.3cm}
+
+\noindent However, we have to be careful not to overinterpret what a low R squared value means for a model's predictive power. This is because as more variables are added to the model, R squared cannot decrease. We can perform other checks, such as by plotting studentized residuals of the data, to ascertain if the low R squared value could be due to outliers or non-linearity.
+
 	
 \end{enumerate}  
 

@@ -106,7 +106,11 @@ p.values.adjacent
 # importance of yard signs versus other factors that are not modeled?
 
 # The R squared for the model is 0.094. Generally, the closer the R squared is to 1,
-# the better the fit. The lower the R squared value, the smaller the proportion of the variance
+# the better the model fit. The lower the R squared value, the smaller the proportion of the variance
 # for a dependent variable (in this case, Cuccinelli's vote share) that can be explained by the independent variables
 # (yard signs and precincts adjacent to yard signs) in the a regression model. This suggests that the model 
-# might benefit from the inclusion of other factors, for example, party identity and campaign spending.
+# might benefit from the inclusion of other factors, for example, party identity and campaign spending. 
+
+# However, we have to be careful not to overinterpret what a low R squared value means for a model's predictive power. 
+# This is because as more variables are added to the model, R squared cannot decrease. We can perform other checks, such as 
+# by plotting studentized residuals, to ascertain if the low R squared value could be due to outliers or non-linearity.
